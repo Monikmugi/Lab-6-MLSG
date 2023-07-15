@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/STYLES/styles.css">
+</head>
+<body>
+  <form id="myForm">
+    <h3>Registro de Pacientes y Doctores</h3>
+    <div>
+      <label for="tipoUsuario">Tipo de Usuario:</label>
+      <input type="radio" name="tipoUsuario" value="paciente" checked> Paciente
+      <input type="radio" name="tipoUsuario" value="doctor"> Doctor
+    </div>
+    <br><br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br><br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+    <br><br>
+    <label for="cedula">Número de Cédula:</label>
+    <input type="text" id="cedula" name="cedula" required>
+    <br><br>
+    <label for="especialidad">Especialidad:</label>
+    <select id="especialidad" name="especialidad">
+      <option value="medicina_general">Medicina General</option>
+      <option value="cardiologia">Cardiología</option>
+      <option value="medicina_interna">Medicina Interna</option>
+      <option value="rehabilitacion_fisica">Rehabilitación Física</option>
+      <option value="psicologia">Psicología</option>
+      <option value="odontologia">Odontología</option>
+      <option value="radiologia">Radiología</option>
+      <option value="dermatologia">Dermatología</option>
+    </select>
+    <br><br>
+    <label for="consultorio">Consultorio:</label>
+    <input type="text" id="consultorio" name="consultorio" required>
+    <br><br>
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required>
+    <br><br>
+    <input type="button" value="Guardar" onclick="guardarDatos()">
+  </form>
+
+  <div id="tablaDiv">
+    <h3>Datos Ingresados:</h3>
+    <table id="tablaDatos">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Cédula</th>
+          <th>Especialidad</th>
+          <th>Consultorio</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <br>
+    <input type="button" value="Limpiar" onclick="limpiarTabla()">
+  </div>
+
+  <script src="/JS/script.js"></script>
+</body>
+</html>
+
+
